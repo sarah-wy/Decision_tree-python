@@ -135,7 +135,7 @@ def CART_chooseBestFeatureToSplit(dataset):
             subdataset=splitdataset(dataset,i,value)
             p=len(subdataset)/float(len(dataset))
             subp = len(splitdataset(subdataset, -1, '0')) / float(len(subdataset))
-        gini += p * (1.0 - pow(subp, 2) - pow(1 - subp, 2))
+            gini += p * (1.0 - pow(subp, 2) - pow(1 - subp, 2))
         print(u"CART中第%d个特征的基尼值为：%.3f"%(i,gini))
         if (gini < bestGini):
             bestGini = gini
